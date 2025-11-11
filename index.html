@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Inria+Serif:ital@1" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <audio id="bgMusic" autoplay loop>
         <source src="/Los Amigos Invisibles - La Que Me Gusta (Acústica)  Letra.mp3" type="audio/mpeg">
     </audio>
@@ -108,6 +107,7 @@
         .texto {
             background-color: #FFC0CB;
             color: #ffffff;
+            font-size: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -127,12 +127,9 @@
 </head>
 
 <script>
-    window.addEventListener('load', () => {
-        if (confirm("¿Deseas activar la música de fondo? 🎶")) {
-            audio.play();
-            audio.volume = 1;
-        }
-    });
+    const audio = document.getElementById('bgMusic');
+    audio.play();
+    audio.volume = 1;
 </script>
 
 <body>
