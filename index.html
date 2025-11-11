@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inria+Serif:ital@1" rel="stylesheet">
+    <audio id="bgMusic" autoplay loop>
+        <source src="/Los Amigos Invisibles - La Que Me Gusta (Acústica)  Letra.mp3" type="audio/mpeg">
+    </audio>
+    <style>
+        body {
+            background-color: rgb(250, 235, 215);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 96vh;
+        }
+
+        .titulo {
+            font-size: 50px;
+            color: #FFC0CB;
+            font-family: 'Inria Serif', serif;
+            font-style: italic;
+        }
+
+        .collage {
+            position: relative;
+            width: 100%;
+            /* tamaño del área del collage */
+            height: 70%;
+            background: #ffffff68;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            overflow: auto;
+        }
+
+        /* Estilo general para todas las imágenes */
+        .collage img {
+            position: absolute;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse */
+        .collage img:hover {
+            transform: scale(1.05) rotate(1deg);
+            z-index: 10;
+        }
+
+        .collage .texto {
+            position: absolute;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse */
+        .collage .texto:hover {
+            transform: scale(1.05) rotate(1deg);
+            z-index: 10;
+        }
+
+        /* Posiciones individuales (puedes ajustar libremente) */
+        .img1 {
+            top: 10%;
+            left: 5%;
+            width: 220px;
+            height: 170px;
+            transform: rotate(-4deg);
+        }
+
+        .img2 {
+            top: 15%;
+            left: 40%;
+            width: 195px;
+            height: 155px;
+            transform: rotate(3deg);
+        }
+
+        .img3 {
+            top: 48%;
+            left: 10%;
+            width: 240px;
+            height: 180px;
+            transform: rotate(5deg);
+        }
+
+        .img4 {
+            top: 50%;
+            left: 55%;
+            width: 190px;
+            height: 150px;
+            transform: rotate(-5deg);
+        }
+
+        .img5 {
+            top: 15%;
+            left: 70%;
+            width: 195px;
+            height: 155px;
+            transform: rotate(-6deg);
+        }
+
+        .texto {
+            background-image: url("loto.jpg");
+            background-size: cover;
+            /* hace que la imagen llene toda la pantalla */
+            background-repeat: no-repeat;
+            /* evita que se repita */
+            background-position: center;
+            color: #f5cfd5;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 60%;
+            left: 70%;
+            width: 190px;
+            height: 150px;
+            transform: rotate(-5deg);
+        }
+
+        .titulo {
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<script>
+    const music = document.getElementById('bgMusic');
+    music.volume = 100; // volumen más suave (0.0 a 1.0)
+</script>
+
+<body>
+    <div class="titulo">Cosita hermosa</div>
+    <div class="collage">
+        <img src="/foto_1.jpg" class="img1" alt="">
+        <img src="/foto_2.jpg" class="img2" alt="">
+        <img src="/foto_3.jpg" class="img3" alt="">
+        <img src="/foto_4.jpg" class="img4" alt="">
+        <img src="/foto_5.jpg" class="img5" alt="">
+        <!-- <img class="img1" alt="">
+        <img class="img2" alt="">
+        <img class="img3" alt="">
+        <img class="img4" alt="">
+        <img class="img5" alt=""> -->
+        <div class="texto">
+            Gracias, he disfrutado cada momento <br>
+            y he salido de mi zona de confort y aunque me de ansiedad algunas veces.<br>
+            tu como siempre has sido especial y has estado ahí<br>
+        </div>
+
+    </div>
+</body>
+
+</html>
