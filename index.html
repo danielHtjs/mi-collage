@@ -127,11 +127,21 @@
 </head>
 
 <script>
+const musica = document.getElementById('musica');
+
+// 🔊 Reproducir solo si el usuario ha interactuado
 window.addEventListener('click', () => {
-  const musica = document.getElementById('musica');
-  musica.muted = false;   // activa el sonido
-  musica.play();          // fuerza reproducción
-}, { once: true });        // solo se ejecuta una vez
+  musica.play();
+}, { once: true });
+
+// 👀 Detectar cuando la pestaña pierde o gana foco
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    musica.pause();   // Pausa si el usuario cambia de pestaña o bloquea el móvil
+  } else {
+    musica.play();    // Reanuda al volver
+  }
+});
 </script>
 
 <body>
