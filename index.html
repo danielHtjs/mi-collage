@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Inria+Serif:ital@1" rel="stylesheet">
-    <audio id="bgMusic" autoplay loop>
+    <audio id="musica" autoplay loop>
         <source src="/Los Amigos Invisibles - La Que Me Gusta (Acústica)  Letra.mp3" type="audio/mpeg">
     </audio>
     <style>
@@ -127,9 +127,11 @@
 </head>
 
 <script>
-    const audio = document.getElementById('bgMusic');
-    audio.play();
-    audio.volume = 1;
+window.addEventListener('click', () => {
+  const musica = document.getElementById('musica');
+  musica.muted = false;   // activa el sonido
+  musica.play();          // fuerza reproducción
+}, { once: true });        // solo se ejecuta una vez
 </script>
 
 <body>
