@@ -17,6 +17,10 @@
             justify-content: center;
             align-items: center;
             height: 96vh;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .titulo {
@@ -29,7 +33,6 @@
         .collage {
             position: relative;
             width: 100%;
-            /* tamaño del área del collage */
             height: 70%;
             background: #ffffff68;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -38,7 +41,6 @@
             overflow: auto;
         }
 
-        /* Estilo general para todas las imágenes */
         .collage img {
             position: absolute;
             border-radius: 10px;
@@ -46,7 +48,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Efecto al pasar el mouse */
         .collage img:hover {
             transform: scale(1.05) rotate(1deg);
             z-index: 10;
@@ -59,13 +60,11 @@
             transition: transform 0.3s ease;
         }
 
-        /* Efecto al pasar el mouse */
         .collage .texto:hover {
             transform: scale(1.05) rotate(1deg);
             z-index: 10;
         }
 
-        /* Posiciones individuales (puedes ajustar libremente) */
         .img1 {
             top: 10%;
             left: 5%;
@@ -107,17 +106,12 @@
         }
 
         .texto {
-            background-image: url("loto.jpg");
-            background-size: cover;
-            /* hace que la imagen llene toda la pantalla */
-            background-repeat: no-repeat;
-            /* evita que se repita */
-            background-position: center;
-            color: #f5cfd5;
-            padding: 2px;
+            background-color: #FFC0CB;
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             top: 60%;
             left: 70%;
             width: 190px;
@@ -131,9 +125,14 @@
         }
     </style>
 </head>
+
 <script>
-    const music = document.getElementById('bgMusic');
-    music.volume = 1; // volumen más suave (0.0 a 1.0)
+    window.addEventListener('load', () => {
+        if (confirm("¿Deseas activar la música de fondo? 🎶")) {
+            audio.play();
+            audio.volume = 1;
+        }
+    });
 </script>
 
 <body>
